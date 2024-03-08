@@ -81,7 +81,7 @@ public class Config extends BaseConfig {
 
 	@Override
 	public LoadingPhase getLoadingPhase() {
-		return LoadingPhase.READY;
+		return LoadingPhase.START;
 	}
 
 	@Override

@@ -43,6 +43,18 @@ public class ConfigScreen extends Screen {
 	}
 
 	@Override
+	protected void mouseClicked(int mouseX, int mouseY, int mouseButton) {
+		super.mouseClicked(mouseX, mouseY, mouseButton);
+		this.list.mouseClicked(mouseX, mouseY, mouseButton);
+	}
+
+	@Override
+	protected void mouseReleased(int mouseX, int mouseY, int mouseButton) {
+		super.mouseReleased(mouseX, mouseY, mouseButton);
+		this.list.mouseReleased(mouseX, mouseY, mouseButton);
+	}
+
+	@Override
 	protected void keyPressed(char chr, int key) {
 		if (key == 1) {
 			// this.minecraft.options.save();

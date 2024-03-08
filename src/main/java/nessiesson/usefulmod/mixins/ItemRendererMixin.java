@@ -66,7 +66,7 @@ public class ItemRendererMixin {
 	}
 
 	@Inject(
-		method = "renderGuiItemDecorations",
+		method = "renderGuiItemDecorations(Lnet/minecraft/client/render/TextRenderer;Lnet/minecraft/item/ItemStack;IILjava/lang/String;)V",
 		at = @At(
 			value = "TAIL"
 		)
