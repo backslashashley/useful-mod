@@ -1,10 +1,9 @@
 package nessiesson.usefulmod.mixins;
 
+import nessiesson.usefulmod.config.Config;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-
-import nessiesson.usefulmod.config.Config;
 
 import net.minecraft.client.gui.widget.ServerListEntryWidget;
 import net.minecraft.client.render.TextRenderer;
@@ -13,9 +12,10 @@ import net.minecraft.client.render.TextRenderer;
 public class ServerListEntryWidgetMixin {
 
 	@Redirect(
-		method = "render", at = @At(
+		method = "render",
+		at = @At(
 			value = "INVOKE",
-			target = "Lnet/minecraft/client/render/TextRenderer;drawString(Ljava/lang/String;III)I",
+			target = "Lnet/minecraft/client/render/TextRenderer;draw(Ljava/lang/String;III)I",
 			ordinal = 0
 		)
 	)
