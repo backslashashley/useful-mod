@@ -67,6 +67,9 @@ public  class ClientPlayNetworkHandlerMixin {
 		if (Config.ALWAYS_DAY.get()) {
 			return time >= 0 ? -(time - time % 24000L + 6000L) : time;
 		}
+		if (Config.ALWAYS_NIGHT.get()) {
+			return time >= 0 ? -(time - time % 24000L + 18000L) : time;
+		}
 
 		return time;
 	}

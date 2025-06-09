@@ -15,6 +15,7 @@ public class Config extends BaseConfig {
 	static final String GROUP = "UsefulMod";
 
 	public static final BooleanOption ALWAYS_DAY = new BooleanOption("alwaysDay", null, false);
+	public static final BooleanOption ALWAYS_NIGHT = new BooleanOption("alwaysNight", null, false);
 	public static final BooleanOption ALWAYS_PICK_BLOCK_MAX_STACK = new BooleanOption("alwaysPickBlockMaxStack", null, false);
 	public static final BooleanOption ALWAYS_RENDER_BLOCK_ENTITIES = new BooleanOption("alwaysRenderBlockEntities", null, false);
 	public static final BooleanOption ALWAYS_SINGLE_PLAYER_CHEATS = new BooleanOption("alwaysSingleplayerCheats", null, false);
@@ -99,6 +100,7 @@ public class Config extends BaseConfig {
 		this.registerOptions(
 			GROUP,
 			ALWAYS_DAY,
+			ALWAYS_NIGHT,
 			ALWAYS_PICK_BLOCK_MAX_STACK,
 			ALWAYS_RENDER_BLOCK_ENTITIES,
 			ALWAYS_SINGLE_PLAYER_CHEATS,
